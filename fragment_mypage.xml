@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/mypage_getcash_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="충전"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15sp"/>
+
+    <ImageView
+        android:id="@+id/mypage_icon_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"/>
+    
+    <TextView
+        android:id="@+id/mypage_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:layout_marginTop="30sp"
+        app:layout_constraintStart_toStartOf="@id/mypage_icon_iv"
+        app:layout_constraintEnd_toEndOf="@id/mypage_icon_iv"
+        app:layout_constraintTop_toBottomOf="@id/mypage_icon_iv"/>
+
+    <TextView
+        android:id="@+id/mypage_cash_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10000 META"
+        android:textSize="35sp"
+        android:textStyle="italic"
+        android:layout_marginTop="15sp"
+        app:layout_constraintTop_toBottomOf="@id/mypage_name_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mypage_tb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:tabSelectedTextColor="#3f3fff"
+        app:tabIndicatorFullWidth="false"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#3f3fff"
+        app:tabRippleColor="#00ff0000"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="@id/mypage_cash_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mypage_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypage_tb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
